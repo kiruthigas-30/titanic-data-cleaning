@@ -78,3 +78,63 @@ Gender, passenger class, age, and ticket fare may be useful features for predict
 
 ### Tools Used
 Python, Pandas, Matplotlib, Seaborn, Google Colab.
+## Task 3: Baseline Model Building and Evaluation
+
+### Objective
+
+To build a baseline machine learning model, evaluate its performance using suitable metrics, compare it with a trained model, and discuss its limitations.
+
+### Baseline Model
+
+A DummyClassifier with the `most_frequent` strategy was used to create the baseline model.
+
+The baseline model predicts the majority class (Not Survived) for every passenger.
+
+### Baseline Model Evaluation Results
+
+| Metric | Score |
+|---|---:|
+| Accuracy | 61.45% |
+| Precision | 0.00 |
+| Recall | 0.00 |
+| F1 Score | 0.00 |
+
+### Trained Model Evaluation Results
+
+| Metric | Score |
+|---|---:|
+| Accuracy | 80.45% |
+| Precision | 79.31% |
+| Recall | 66.67% |
+| F1 Score | 72.44% |
+
+### Model Comparison
+
+The trained model achieved 80.45% accuracy, while the baseline model achieved 61.45%.
+
+This shows an improvement of approximately 19 percentage points over the baseline model.
+
+The trained model performs better because it learns patterns from the passenger data instead of always predicting the majority class.
+
+### Confusion Matrix and Classification Report
+
+The confusion matrix and classification report were generated to evaluate the trained model's prediction performance.
+
+Key observations:
+- The model achieved 89% recall for passengers who did not survive.
+- The model achieved 67% recall for passengers who survived.
+- The model performs better at identifying non-survivors than survivors.
+
+### Limitations
+
+1. The Titanic dataset contains a limited number of passenger records.
+2. Missing values may affect prediction accuracy.
+3. The dataset has an imbalance between survival classes.
+4. The model has relatively low recall for the Survived class.
+5. The model's performance on unseen datasets is not guaranteed.
+
+### Conclusion
+
+A baseline model was successfully developed and evaluated using classification metrics. The trained machine learning model achieved better performance than the baseline model, demonstrating its ability to learn useful patterns from the Titanic dataset.
+
+The evaluation also identified areas for improvement, particularly in predicting passengers who survived.
